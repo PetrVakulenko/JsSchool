@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pesochnica</title>
+</head>
+<body>
+
+<script>
+
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    console.log(
+        arr.length > 0 ?
+        arr.reduce(function(sum, current, index, arr) {
+            return sum + (index % 2 == 0 ? current : 0);
+        }, 0)/Math.round(arr.length/2) : 0
+    );
+
+    /////////////////////////////////////////////////////////////////////////
+
+    const data = [
+        { month: '2018-01', amount: 12 },
+        { month: '2018-01', amount: 10 },
+        { month: '2018-02', amount: 35 },
+        { month: '2018-02', amount: 45 },
+    ]
+
+    console.log(data);
+
+    const groupedSample = [
+        ['2018-01', 11],
+        ['2018-02', 11],
+    ];
+
+    const sumAndCount = (obj, value) => ({
+        s: obj.s += value,
+        c: obj.c += 1,
+        avg: obj.s / obj.c
+    });
+
+    const defState = {
+        s: 0,
+        c: 0,
+    };
+
+    const grouped = Object.entries(
+        data.reduce(
+            (state, item, index) => {
+                const prevState = JSON.stringify(state, null, 2);
+                state[item.month] = sumAndCount(
+                    state[item.month] || { ...defState},
+                    item.amount
+                );
+                console.log(
+                    index,
+                    item,
+                    prevState,
+                    JSON.stringify(state, null, 2)
+                );
+                return state;
+            }, {}
+        )
+    );
+
+    console.log(grouped);
+
+    console.log(grouped.map(
+        item => [item[0], item[1].avg]
+    ));
+
+</script>
+
+</body>
+</html>

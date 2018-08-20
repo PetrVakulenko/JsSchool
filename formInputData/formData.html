@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        label, div {float: left;}
+        .clear {clear: both;}
+    </style>
+    <title>Form data</title>
+</head>
+<body>
+    <label for="firstname">Имя: </label><div id="firstname"></div><div class="clear"></div>
+    <label for="lastname">Фамилия: </label><div id="lastname"></div><div class="clear"></div>
+    <label for="age">Возраст: </label><div id="age"></div><div class="clear"></div>
+    <label for="sex">Пол: </label><div id="sex"></div><div class="clear"></div>
+
+    <script>
+        document.getElementById("firstname").innerHTML = prompt('Какое ваше имя?', 'Имя').toString();
+        document.getElementById("lastname").innerHTML = prompt("Какая ваша фамилия?", "Фамилия").toString();
+        document.getElementById("age").innerHTML = prompt("Какой ваш возраст?", "Возраст").toString();
+        document.getElementById("sex").innerHTML = prompt("Какой ваш пол?", "Пол").toString();
+        function pow(x, n) {
+            return (n!=1) ? x * pow(x, n-1) : x;
+        }
+
+        var result;
+        result = pow(result, 5);
+        console.log(result);
+    </script>
+</body>
+</html>
