@@ -36,3 +36,7 @@ web.config
 thumbs.db
 Thumbs.db
 Icon?
+
+NpmProject/node_modules
+NpmProject/dist
+NpmProject/npm-degug.log
