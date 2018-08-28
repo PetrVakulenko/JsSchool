@@ -17,21 +17,14 @@
         }, 0)/Math.round(arr.length/2) : 0
     );
 
-    /////////////////////////////////////////////////////////////////////////
-
     const data = [
         { month: '2018-01', amount: 12 },
         { month: '2018-01', amount: 10 },
         { month: '2018-02', amount: 35 },
         { month: '2018-02', amount: 45 },
-    ]
+    ];
 
     console.log(data);
-
-    const groupedSample = [
-        ['2018-01', 11],
-        ['2018-02', 11],
-    ];
 
     const sumAndCount = (obj, value) => ({
         s: obj.s += value,

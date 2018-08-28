@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link media="all" rel="stylesheet" href="app/css/style.css" />
+    <title>DOM structure</title>
+</head>
+<body>
+    <div class="filestructure">
+        <div depth="1" class="folder-container closed-folder">
+            <div class="folder">Folder4</div>
+        </div>
+        <div depth="1" class="folder-container opened-folder">
+            <div class="folder">Folder1</div>
+            <div depth="2" class="file">File11</div>
+            <div depth="2" class="file">File12</div>
+            <div depth="2" class="folder-container opened-folder">
+                <div class="folder">Folder2</div>
+                <div depth="3" class="file">File21</div>
+                <div depth="3" class="file">File22</div>
+            </div>
+            <div depth="2" class="folder-container opened-folder">
+                <div class="folder">Folder3</div>
+                <div depth="3" class="folder-container opened-folder">
+                    <div depth="4" class="folder">Folder3</div>
+                    <div depth="4" class="file">File331</div>
+                    <div depth="4" class="file">File332</div>
+                    <div depth="4" class="file">File333</div>
+                    <div depth="4" class="file">File334</div>
+                    <div depth="4" class="file">File335</div>
+                </div>
+                <div depth="3" class="file">File31</div>
+                <div depth="3" class="file">File32</div>
+                <div depth="3" class="file">File33</div>
+            </div>
+            <div depth="2" class="folder-container closed-folder">
+                <div class="folder">Folder4</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app/js/index.js"></script>
+</body>
+</html>

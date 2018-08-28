@@ -1,0 +1,18 @@
+div {float: left; clear:both;}
+.closed-folder {background: url(../images/folder.png);}
+.file {background: url(../images/file.png);}
+.opened-folder {background: url(../images/opened-folder.ico);}
+.closed-folder, .file, .opened-folder {
+    margin-left: 30px;
+    padding-left: 20px;
+    background-size: 20px, 20px;
+    background-repeat: no-repeat;
+}
+.closed-folder .closed-folder, .opened-folder {
+    margin-left: 30px;
+}
+
+.closed-folder, .opened-folder {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
