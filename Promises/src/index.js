@@ -7,16 +7,36 @@ const timeout = maxTimeout => new Promise(
 
 const fetchGithubUser = userName => fetch(`https://api.github.com/users/${userName}`);
 
-const addProperty = (user, element, propertyGet, property = 'innerHtml') => {
+const addProperty = (user, element, propertyGet, property = 'innerHTML') => {
     const elem = document.createElement(element);
-    elem.property = (user.propertyGet !== '' && user.propertyGet !== undefined && user.propertyGet !== '-')
-        ? user.propertyGet : 'null';
+
+    elem[property] = user[propertyGet] !== undefined && user[propertyGet] !== null && user[propertyGet] !== ''
+        ? user[propertyGet]
+        : 'null';
+
+    if (element === 'span') {
+        const propertyName = document.createElement('span');
+        propertyName.innerHTML = propertyGet + ': ';
+        propertyName.style.fontWeight = 'bold';
+        document.body.appendChild(propertyName);
+    }
+
     document.body.appendChild(elem);
+
+    if (element === 'span') {
+        document.body.appendChild(document.createElement('br'));
+    }
+
+    return user;
+};
+
+const getUserInfo = user => {
+    console.log('User fetched', user);
+
+    return user;
 };
 
 const appendAvatar = user => {
-    console.log('User fetched', user);
-
     addProperty(user, 'img', 'avatar_url', 'src');
 
     return user;
@@ -40,7 +60,7 @@ const appendProperties = user => {
     document.body.appendChild(h3);
 
     for(var key in user) {
-        addProperty(user, 'p', key);
+        addProperty(user, 'span', key);
     }
 
     return user;
@@ -69,6 +89,7 @@ const showAvatar = (userName, maxTimeout = 100) => Promise
     .race([ timeout(maxTimeout), fetchGithubUser(userName) ])
     .then(checkSuccess)
     .then(res => res.json())
+    .then(getUserInfo)
     .then(appendAvatar)
     .then(appendLogin)
     .then(appendName)
