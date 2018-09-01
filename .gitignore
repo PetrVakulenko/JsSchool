@@ -39,4 +39,7 @@ Icon?
 
 NpmProject/node_modules
 NpmProject/dist
-NpmProject/npm-degug.log
+NpmProject/npm-debug.log
+NpmProjectLesson2/node_modules
+NpmProjectLesson2/dist
+NpmProjectLesson2/npm-debug.log
