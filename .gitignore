@@ -12,6 +12,7 @@ web.config
 # Folders
 /vendor
 /.idea
+/SandBox
 
 # compressed file extensions
 *.7z
@@ -38,14 +39,6 @@ Thumbs.db
 Icon?
 
 # NPM projects
-NpmProject/node_modules
-NpmProject/dist
-NpmProject/npm-debug.log
-
-NpmProjectLesson2/node_modules
-NpmProjectLesson2/dist
-NpmProjectLesson2/npm-debug.log
-
 NpmPaymentStatement/node_modules
 NpmPaymentStatement/dist
 NpmPaymentStatement/npm-debug.log
