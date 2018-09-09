@@ -1,24 +1,16 @@
 import React from 'react';
 import GitHubAccountPreview from './GitHubAccountPreview';
 
-import GHAccountJson1 from './profiles.json';
-
-const profiles = [
-    GHAccountJson1,
-];
+import profiles from './profiles.json';
 
 const GitHubAccountList = () => profiles.map(
     profile => (
         <GitHubAccountPreview
             key={profile.login}
-            avatar_url={profile.avatar_url}
-            name={profile.name}
             login={profile.login}
-            company={profile.company}
-            location={profile.location}
-            public_repos={profile.public_repos}
-            followers={profile.followers}
-            following={profile.following}
+            avatar_url={profile.avatar_url}
+            url={profile.url}
+            site_admin={profile.site_admin}
         />
     )
 );
