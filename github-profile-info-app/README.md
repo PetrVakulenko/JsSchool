@@ -4,7 +4,7 @@
   - npm-start - start the project
   - npm-test - start tests for the project (files like *.test.js)
 
-##Structure
+## Structure
 ```
 my-app/
   README.md
