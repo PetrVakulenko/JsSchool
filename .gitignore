@@ -42,3 +42,7 @@ Icon?
 NpmPaymentStatement/node_modules
 NpmPaymentStatement/dist
 NpmPaymentStatement/npm-debug.log
+
+github-profile-info-app/node_modules
+github-profile-info-app/dist
+github-profile-info-app/npm-debug.log
