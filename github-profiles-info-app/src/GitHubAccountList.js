@@ -1,7 +1,7 @@
 import React from 'react';
 import GitHubAccountPreview from './GitHubAccountPreview';
 
-import GHAccountJson1 from './profile.json';
+import GHAccountJson1 from './profiles.json';
 
 const profiles = [
     GHAccountJson1,
