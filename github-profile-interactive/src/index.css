@@ -1,0 +1,26 @@
+h5 {
+    font-weight: bold;
+}
+
+.left-side {
+    float:left;
+}
+
+.right-side {
+    float: right;
+    margin-left: 10px;
+    width: 55%;
+}
+
+.btn-danger {
+    float: left;
+}
+
+.btn-success {
+    float: right;
+}
+
+.container .row,
+.container .row form{
+    width: inherit;
+}
