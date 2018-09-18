@@ -6,7 +6,7 @@ const App = () => (
   <div className="container">
     <div className="row">
       <GHUserProfileInfo
-          url="https://api.github.com/users/PetrVakulenko"
+          url="https://api.github.com/users/PetrVakulenko1"
       />
     </div>
   </div>

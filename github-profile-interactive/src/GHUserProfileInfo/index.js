@@ -1,7 +1,7 @@
 import React from 'react';
 import GHUserProfileCard from './GHUserProfileCard';
 import GHUserProfileInfoForm from './GHUserProfileInfoForm';
-import { updateGHUserProfile, fetchGHUserProfile } from './GHUserProfile';
+import { pushDataToServer, updateGHUserProfile, fetchGHUserProfile } from './GHUserProfile';
 
 const BI_MODE_VIEW = 'view';
 const BI_MODE_EDIT = 'edit';
@@ -37,6 +37,7 @@ class GHUserProfileInfo extends React.Component {
     this.setState(
       updateGHUserProfile(data)
     );
+    pushDataToServer(data)
   };
 
   loadGHUserProfile() {
