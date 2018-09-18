@@ -17,6 +17,8 @@ const api = {
             },
             body: JSON.stringify(data)
         });
+
+        console.log(data);
     }
 };
 

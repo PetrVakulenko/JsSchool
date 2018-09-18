@@ -1,4 +1,4 @@
-import GHUserProfileModel from "../api";
+import api from "../api";
 
 const getGHUserProfileInfo = user => {
     return user;
@@ -9,7 +9,7 @@ export const updateGHUserProfile = data => ({ user }) => ({
 });
 
 export const pushDataToServer = (data) =>
-    GHUserProfileModel.post(data);
+    api.post(data);
 
 export const fetchGHUserProfile = url => (
   fetch(url)
