@@ -7,16 +7,22 @@
 </head>
 <body>
     <script>
-        var projects = {
+        let projects = {
             'File Manager' : 'FileManager/index.html',
             'Form Input Data' : 'formInputData/index.html',
             'Payment Statement' : 'PaymentStatement/index.html',
             'Interactive File Manager' : 'InteractiveFileManager/index.html',
             'Promises' : 'Promises/index.html',
             'React WorkShop' : 'js-react-workshop/index.html',
+            'GitHub profile info app' : 'github-profile-info-app/build/index.html',
+            'GitHub profile interactive' : 'github-profile-interactive/build/index.html',
+            'GitHub profiles info app' : 'github-profiles-info-app/build/index.html',
+            'Redux user form' : 'reduxUserForm/build/index.html',
+            'Redux github Profile' : 'reduxGithubProfile/build/index.html',
+            'Redux todo list' : 'reduxTodolist/build/index.html',
         };
 
-        for(key in projects) {
+        for(let key in projects) {
             const elem = document.createElement('a');
             elem.href = projects[key];
             elem.innerHTML = key;

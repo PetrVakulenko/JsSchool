@@ -11,7 +11,6 @@ web.config
 
 # Folders
 /vendor
-/.idea
 /SandBox
 
 # compressed file extensions
@@ -32,17 +31,7 @@ web.config
 *.sqlite
 *~
 
-# OS generated files
-.DS_Store*
-thumbs.db
-Thumbs.db
-Icon?
-
-# NPM projects
-NpmPaymentStatement/node_modules
-NpmPaymentStatement/dist
-NpmPaymentStatement/npm-debug.log
-
-github-profile-info-app/node_modules
-github-profile-info-app/dist
-github-profile-info-app/npm-debug.log
+# Npm projects
+*node_modules
+*npm-debug.log
+*dist
